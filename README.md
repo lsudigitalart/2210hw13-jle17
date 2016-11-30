@@ -1,2 +1,3 @@
-- Click => https://classroom.github.com/assignment-invitations/49c94355f917d632c18ce8d4ef25b4b4
-- HW: Final Project: Choose 1 past project to improve.
+- https://classroom.github.com/assignment-invitations/2b9cfedaedd4799f7dc6d0cddb839a82
+- HW: 10/Objects: Create code modules that combine variables and functions.
+- HW: Simulate a race using different looking shapes that are all "instances" of the same "object."
