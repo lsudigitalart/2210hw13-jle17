@@ -1,10 +1,12 @@
 var bag;
 var bottomWater;
+var c;    //cursor variable
 var eel;
 var schoolFish;
 var shark;
 var ship;
 var sky;
+var text;
 var topWater;
 var turtle;
 var whale;
@@ -13,6 +15,7 @@ var thing1;
 var thing2;
 
 function preload(){
+  text = loadImage("img/text.png");
   bottomWater = loadImage("img/bottomWater.png");
   eel = loadImage("img/eel.png");
   schoolFish = loadImage("img/schoolFish.png");
@@ -25,14 +28,15 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(790, 625);
-  thing1 = new Thing(1, random(2), 0, 20); //ship
-  thing2 = new Thing(2, random(2), 0, 220);  //turtle
-  thing3 = new Thing(3, random(2), 0, 275);  //shark
-  thing4 = new Thing(4, random(2), 0, 410);  //eel
-  thing5 = new Thing(5, random(2), 0, 475);  //whale
-  thing6 = new Thing(6, random(2), random(width/2), 250);  //schoolFish
-  thing7 = new Thing(6, random(2), random(width/2), 450);  //schoolFish
+  createCanvas(1188, 625);
+  thing1 = new Thing(1, random(4), 0, 20); //ship
+  thing2 = new Thing(2, random(4), 0, 220);  //turtle
+  thing3 = new Thing(3, random(4), 0, 275);  //shark
+  thing4 = new Thing(4, random(4), 0, 410);  //eel
+  thing5 = new Thing(5, random(4), 0, 475);  //whale
+  thing6 = new Thing(6, random(4), random(width/2), 250);  //schoolFish
+  thing7 = new Thing(6, random(4), random(width/2), 450);  //schoolFish
+
 }
 
 function draw(){
@@ -54,6 +58,8 @@ function draw(){
   thing1.interact();
 
   image(bottomWater, -17, 110);
+
+  image(text, width/4 - 30, height/2);
 
   //turtle
   thing2.display();
@@ -84,6 +90,7 @@ function draw(){
   thing5.interact();
 
 }
+
 
 function Thing(tempDisplay, tempSpeed, tempXPosition, tempYPosition){
 
@@ -121,7 +128,7 @@ function Thing(tempDisplay, tempSpeed, tempXPosition, tempYPosition){
     if (mouseY > this.yPosition + 10 && mouseY < this.yPosition + 100 && mouseX > this.xPosition){
       this.speed = 0;
     } else {
-      this.speed = random(2);
+      this.speed = random(4);
     };
           println(this, this.yPosition);
   };
